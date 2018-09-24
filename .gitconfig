@@ -1,0 +1,45 @@
+[push]
+	default = current
+[alias]
+    cfg = !vim ~/stephen_config/.gitconfig
+    cfge = config --global -e
+    ch = checkout
+    blist = branch --list
+    st = status
+    difw = diff -w
+    com = commit -m
+
+    ls = log --pretty=format:\"%C(yellow)%h%Cred%d\\\\ %Creset%s%Cgreen\\\\ [%cn]\" --decorate
+    lh = log --pretty=format:\"%C(yellow)%h%Cred%d\\\\ %Creset%s%Cgreen\\\\ [%cn]\" --decorate -3
+    lhh = log --pretty=format:\"%C(yellow)%h%Cred%d\\\\ %Creset%s%Cgreen\\\\ [%cn]\" --decorate -10
+    lsa = log --pretty=format:\"%C(yellow)%h%Cred%d\\\\ %Creset%s%Cgreen\\\\ [%cn]\" --decorate --all
+    lsd = log --pretty=format:\"%C(yellow)%h\\\\ %ad%Cgreen%d\\\\ %Creset%s%Cblue\\\\ [%cn]\" --decorate --date=short
+    lsf = log --follow --oneline --stat
+    lsg = log --graph --oneline
+
+    dif = diff
+    difc = diff --cached -w
+    br-diff = "!f() { git diff -w ${1-master} ${2-HEAD}; }; f"
+    
+    # this nasty-looking command shows the files that have changed between master and HEAD
+    # (or some other branch and HEAD, or any two branches)
+    # it's ugly because it invokes a bash command that provides defaults for $1 and $2 if they don't exist.
+    chf = "!f() { git diff-tree -r --name-status ${1-HEAD}~1 ${1-HEAD}; }; f"
+    cha = "!f() { git diff-tree -r --name-status ${1-master} ${2-HEAD}; }; f"
+
+    # run rubocop only against files changed in this branch (exclude deleted files)
+    rubo = !"git diff-tree -r --no-commit-id --name-only --diff-filter=d master HEAD | xargs rubocop"
+
+    # Switch to master and pull latest
+    pul = !git checkout master && git pull
+
+    am = commit --amend
+    amend = commit --amend
+    amx = commit --amend --no-edit
+    amendx = commit --amend --no-edit
+    first-push = push -u origin HEAD
+
+    start = checkout -b
+    
+[gui]
+	diffopts = -w
