@@ -1,0 +1,28 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "vsicons.dontShowNewVersionMessage": true,
+    "vim.leader": ",",
+    "vim.cmdLineInitialColon": true,
+    "vim.easymotion": true,
+    "vim.useSystemClipboard": true,
+    "vim.substituteGlobalFlag": true,
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            "before": [ ";" ],
+            "after": [ ":" ]
+        },
+        {
+            "before": [ "[" ],
+            "after": [ "?", "[", "<Enter>" ]
+        },
+        {
+            "before": [ "Y" ],
+            "after": [ "y", "$" ]
+        },
+        {
+            "before": [ "<leader>", "a" ],
+            "after": [ "G", "V", "g", "g" ]
+        }
+    ],
+    "ruby.intellisense": "solargraph"
+}

@@ -1,0 +1,41 @@
+[
+    {
+        "key": "shift+escape",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "sidebarVisible"
+    },
+    {
+        "key": "cmd+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "shift+cmd+e",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "explorerViewletVisible"
+    },
+    {
+        "key": "shift+cmd+x",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "sidebarVisible && !explorerViewletVisible"
+    },
+    {
+        "key": "alt+tab",
+        "command": "workbench.action.focusNextGroup",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+tab",
+        "command": "workbench.action.focusPreviousGroup",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.nextEditor",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.previousEditor",
+        "when": "editorTextFocus"
+    }
+]
