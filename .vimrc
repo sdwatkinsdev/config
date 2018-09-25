@@ -108,6 +108,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'w0rp/ale'
+Plug 'tpope/vim-surround'
 " I liked gitgutter, but it clashes with ALE, which I like slightly more
 " Plug 'airblade/vim-gitgutter'
 
