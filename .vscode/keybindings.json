@@ -6,7 +6,11 @@
     },
     {
         "key": "cmd+b",
-        "command": "-workbench.action.toggleSidebarVisibility"
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "workbench.action.toggleSidebarVisibility"
     },
     {
         "key": "shift+cmd+e",
@@ -14,7 +18,17 @@
         "when": "explorerViewletVisible"
     },
     {
+        "key": "shift+ctrl+e",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "explorerViewletVisible"
+    },
+    {
         "key": "shift+cmd+x",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "sidebarVisible && !explorerViewletVisible"
+    },
+    {
+        "key": "shift+ctrl+x",
         "command": "workbench.action.toggleSidebarVisibility",
         "when": "sidebarVisible && !explorerViewletVisible"
     },

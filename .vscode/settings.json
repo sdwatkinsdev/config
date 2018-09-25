@@ -1,19 +1,41 @@
 {
-    "workbench.iconTheme": "vscode-icons",
-    "vsicons.dontShowNewVersionMessage": true,
-    "vim.leader": ",",
-    "vim.cmdLineInitialColon": true,
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 5000,
+    "editor.dragAndDrop": false,
+    "editor.fontSize": 12,
+    "editor.wordWrapColumn": 150,
     "vim.easymotion": true,
-    "vim.useSystemClipboard": true,
-    "vim.substituteGlobalFlag": true,
-    "vim.otherModesKeyBindingsNonRecursive": [
-        {
-            "before": [ ";" ],
-            "after": [ ":" ]
-        },
+    "vim.handleKeys": {
+        "<C-w>": false,
+        "<C-k>": false
+    },
+    "vim.history": 5000,
+    "vim.leader": ",",
+    "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [ "[" ],
-            "after": [ "?", "[", "<Enter>" ]
+            "after": [ "?", "[", "<CR>" ]
+        },
+        {
+            "before": [ "{" ],
+            "after": [ "?", "{", "<CR>" ]
+        },
+        {
+            "before": [ "(" ],
+            "after": [ "?", "(", "<CR>" ]
+        },
+        {
+            "before": [ "]" ],
+            "after": [ "/", "]", "<CR>" ]
+        },
+        {
+            "before": [ "}" ],
+            "after": [ "/", "}", "<CR>" ]
+        },
+        {
+            "before": [ ")" ],
+            "after": [ "/", ")", "<CR>" ]
         },
         {
             "before": [ "Y" ],
@@ -21,8 +43,21 @@
         },
         {
             "before": [ "<leader>", "a" ],
-            "after": [ "G", "V", "g", "g" ]
+            "after": [ "g", "g", "V", "G" ]
+        },
+        {
+            "before": [ ";" ],
+            "after": [ ":" ]
         }
     ],
-    "ruby.intellisense": "solargraph"
+    "vim.substituteGlobalFlag": true,
+    "vim.textwidth": 120,
+    "vim.timeout": 2000,
+    "vim.useSystemClipboard": true,
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [ "p" ],
+            "after": [ "p", "g", "v", "y" ]
+        }
+    ]
 }
