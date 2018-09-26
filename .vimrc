@@ -85,12 +85,6 @@ nnoremap <leader>/ ^i# <ESC>b
 " Regenerate tags for Ruby projects (works in real Vim but not IdeaVim)
 nnoremap <leader>gt :!ripper-tags -R --exclude=vendor<CR>
 
-" add and remove parens/braces
-" TODO USE vim-surround INSTEAD
-" nnoremap <leader>bd /)<CR>x?(<CR>x
-" DOESN'T WORK IN RUBYMINE AND `> INCONSISTENT WITH MACVIM
-" vnoremap <leader>ba <Esc>`>a)<Esc>`<i(<Esc>
-
 " color stuff that needs to go elsewhere
 highlight Error ctermbg=124
 highlight ErrorMsg ctermbg=124
