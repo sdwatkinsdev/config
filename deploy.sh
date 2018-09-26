@@ -1,8 +1,5 @@
 #! usr/bin/env bash
 
-# TODO: this isn't accurate; the gitconfig is included rather than copied
-# and I suspect a similar thing will happen with vimrc
-
 # supposedly this reliably returns the location of the current script
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 
