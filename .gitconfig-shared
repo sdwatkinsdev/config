@@ -1,13 +1,25 @@
 [push]
     default = current
 [alias]
-    cfg = !vim ~/stephen_config/.gitconfig
+    am = commit --amend
+    ap = add -p
+    amend = commit --amend
+    amx = commit --amend --no-edit
+    amendx = commit --amend --no-edit
+    blist = branch --list
+    cfg = !vim ~/stephen_config/.gitconfig-shared
     cfge = config --global -e
     ch = checkout
-    blist = branch --list
-    st = status
-    difw = diff -w
     com = commit -m
+    dif = diff
+    difc = diff --cached -w
+    difw = diff -w
+    mrga = merge --abort
+    mrgc = merge --continue
+    reba = rebase --abort
+    rebc = rebase --continue
+    st = status
+    start = checkout -b
 
     ls = log --pretty=format:\"%C(yellow)%h%Cred%d\\\\ %Creset%s%Cgreen\\\\ [%cn]\" --decorate
     lh = log --pretty=format:\"%C(yellow)%h%Cred%d\\\\ %Creset%s%Cgreen\\\\ [%cn]\" --decorate -3
@@ -17,8 +29,6 @@
     lsf = log --follow --oneline --stat
     lsg = log --graph --oneline
 
-    dif = diff
-    difc = diff --cached -w
     br-diff = "!f() { git diff -w ${1-master} ${2-HEAD}; }; f"
 
     # this nasty-looking command shows the files that have changed between master and HEAD
@@ -32,14 +42,7 @@
 
     # Switch to master and pull latest
     pul = !git checkout master && git pull
-
-    am = commit --amend
-    amend = commit --amend
-    amx = commit --amend --no-edit
-    amendx = commit --amend --no-edit
     first-push = push -u origin HEAD
-
-    start = checkout -b
 
 [gui]
     diffopts = -w
