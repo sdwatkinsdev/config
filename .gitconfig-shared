@@ -7,6 +7,7 @@
     amx = commit --amend --no-edit
     amendx = commit --amend --no-edit
     blist = branch --list
+    brf = diff-tree -r --name-only --diff-filter=d master HEAD
     cfg = !vim ~/stephen_config/.gitconfig-shared
     cfge = config --global -e
     ch = checkout
@@ -29,13 +30,16 @@
     lsf = log --follow --oneline --stat
     lsg = log --graph --oneline
 
+    # shows all changes (not just filenames) between branches
     br-diff = "!f() { git diff -w ${1-master} ${2-HEAD}; }; f"
 
     # this nasty-looking command shows the files that have changed between master and HEAD
     # (or some other branch and HEAD, or any two branches)
     # it's ugly because it invokes a bash command that provides defaults for $1 and $2 if they don't exist.
-    chf = "!f() { git diff-tree -r --name-status ${1-HEAD}~1 ${1-HEAD}; }; f"
-    cha = "!f() { git diff-tree -r --name-status ${1-master} ${2-HEAD}; }; f"
+    chb = "!f() { git diff-tree -r --name-status ${1-master} ${2-HEAD}; }; f"
+
+    # this one is changed files for a single commit
+    chc = "!f() { git diff-tree -r --name-status ${1-HEAD}~1 ${1-HEAD}; }; f"
 
     # run rubocop only against files changed in this branch (exclude deleted files)
     rubo = !"git diff-tree -r --no-commit-id --name-only --diff-filter=d master HEAD | xargs rubocop"
