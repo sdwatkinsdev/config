@@ -14,6 +14,10 @@
     "vim.leader": ",",
     "vim.normalModeKeyBindingsNonRecursive": [
         {
+            "before": [ ";" ],
+            "after": [ ":" ]
+        },
+        {
             "before": [ "[" ],
             "after": [ "?", "[", "<CR>" ]
         },
@@ -45,10 +49,17 @@
             "before": [ "<leader>", "a" ],
             "after": [ "g", "g", "V", "G" ]
         },
+        // Workaround: Visual Mode chord bug
+        // https://github.com/VSCodeVim/Vim/issues/2842
         {
-            "before": [ ";" ],
-            "after": [ ":" ]
+            "before": ["v"],
+            "after": ["v", "l", "h"]
         }
+        // This doesn't work because `[ and `] aren't implemented
+        // {
+        //     "before": ["g", "p"],
+        //     "after": ["`", "[", "v", "`", "]"]
+        // }
     ],
     "vim.substituteGlobalFlag": true,
     "vim.textwidth": 120,
@@ -56,8 +67,55 @@
     "vim.useSystemClipboard": true,
     "vim.visualModeKeyBindingsNonRecursive": [
         {
+            "before": [ ";" ],
+            "after": [ ":" ]
+        },
+        {
+            "before": [ "[" ],
+            "after": [ "?", "[", "<CR>" ]
+        },
+        {
+            "before": [ "{" ],
+            "after": [ "?", "{", "<CR>" ]
+        },
+        {
+            "before": [ "(" ],
+            "after": [ "?", "(", "<CR>" ]
+        },
+        {
+            "before": [ "]" ],
+            "after": [ "/", "]", "<CR>" ]
+        },
+        {
+            "before": [ "}" ],
+            "after": [ "/", "}", "<CR>" ]
+        },
+        {
+            "before": [ ")" ],
+            "after": [ "/", ")", "<CR>" ]
+        },
+        {
             "before": [ "p" ],
             "after": [ "p", "g", "v", "y" ]
         }
-    ]
+    ],
+    "window.zoomLevel": 0,
+    "editor.folding": false,
+    "editor.hover.delay": 250,
+    "editor.mouseWheelZoom": true,
+    "editor.renderControlCharacters": true,
+    "editor.tabCompletion": "on",
+    "editor.cursorBlinking": "solid",
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.enabled": false,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "workbench.enableExperiments": false,
+    "workbench.statusBar.feedback.visible": false,
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "extensions.showRecommendationsOnlyOnDemand": true,
+    "extensions.ignoreRecommendations": true,
+    "telemetry.enableTelemetry": false
 }
