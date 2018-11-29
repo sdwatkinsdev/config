@@ -1,6 +1,6 @@
 [core]
     excludesfile = /Users/swatkins/.gitignore
-    editor = mvim -v
+    # editor = mvim -v
 [color]
     ui = true
 [diff]

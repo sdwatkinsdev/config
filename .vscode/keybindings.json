@@ -43,13 +43,48 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+tab",
-        "command": "workbench.action.nextEditor",
+        "key": "shift+escape",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminalFocus && !terminalTextSelected && !terminalFindWidgetVisible"
+    },
+    {
+        "key": "shift+alt+down",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+alt+up",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+left",
+        "command": "workbench.action.focusLeftGroup",
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+shift+tab",
-        "command": "workbench.action.previousEditor",
+        "key": "alt+right",
+        "command": "workbench.action.focusRightGroup",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "workbench.action.navigateBack",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+]",
+        "command": "workbench.action.navigateForward",
         "when": "editorTextFocus"
     }
+    // {
+    //     "key": "ctrl+tab",
+    //     "command": "workbench.action.nextEditor",
+    //     "when": "editorTextFocus"
+    // },
+    // {
+    //     "key": "ctrl+shift+tab",
+    //     "command": "workbench.action.previousEditor",
+    //     "when": "editorTextFocus"
+    // }
 ]

@@ -1,4 +1,4 @@
-#! usr/bin/env bash
+#!/usr/bin/env bash
 
 # supposedly this reliably returns the location of the current script
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
@@ -26,7 +26,7 @@ echo "-----------------"
 echo "Home files"
 echo "-----------------"
 
-HOME_FILES=(".gitconfig" ".vimrc" ".pryrc")
+HOME_FILES=(".gitconfig" ".vimrc" ".pryrc", ".bashrc")
 for file in "${HOME_FILES[@]}"
 do
     find_or_link $file $DIR ~
