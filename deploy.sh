@@ -26,7 +26,7 @@ echo "-----------------"
 echo "Home files"
 echo "-----------------"
 
-HOME_FILES=(".gitconfig" ".vimrc" ".pryrc", ".bashrc")
+HOME_FILES=(".gitconfig" ".vimrc" ".pryrc" ".bashrc")
 for file in "${HOME_FILES[@]}"
 do
     find_or_link $file $DIR ~
