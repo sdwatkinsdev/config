@@ -75,7 +75,7 @@ echo "-----------------"
 echo "Ensure directories exist"
 echo "-----------------"
 
-find_or_create_dir "~/.vim"
+find_or_create_dir ~/.vim
 
 echo
 echo "-----------------"
@@ -88,7 +88,7 @@ do
     find_or_link $file $DIR ~
 done
 
-find_or_copy .gitconfig . ~
+find_or_copy .gitconfig $DIR ~
 
 echo
 echo "-----------------"
