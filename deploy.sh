@@ -15,6 +15,25 @@ find_or_create_dir () {
     fi
 }
 
+find_or_copy () {
+    local filename="$1"
+    local source_dir="$2"
+    local target_dir="$3"
+
+    local source="$source_dir/$filename"
+    local target="$target_dir/$filename"
+    if [ -e "$target" ]
+    then
+        padded=$(printf '%-20s' $filename)
+        echo "$padded already exists at $target"
+    else
+        find_or_create_dir $target_dir
+        cp "$source" "$target_dir"
+        padded=$(printf '%-18s' $filename)
+        echo "$padded +++ copied to $target"
+    fi
+}
+
 find_or_link () {
     local filename="$1"
     local source_dir="$2"
@@ -63,11 +82,13 @@ echo "-----------------"
 echo "Home files"
 echo "-----------------"
 
-HOME_FILES=(".gitconfig" ".vimrc" ".pryrc" ".bashrc")
+HOME_FILES=(".vimrc" ".pryrc" ".bashrc")
 for file in "${HOME_FILES[@]}"
 do
     find_or_link $file $DIR ~
 done
+
+find_or_copy .gitconfig . ~
 
 echo
 echo "-----------------"

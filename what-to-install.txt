@@ -1,0 +1,6 @@
+Git
+VS Code
+Neovim
+AutoHotkey
+Dropbox
+
