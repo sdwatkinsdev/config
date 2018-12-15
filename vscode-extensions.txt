@@ -1,0 +1,4 @@
+ecmel.vscode-html-css
+georgewfraser.fsharp-language-server
+ms-vscode.csharp
+vscodevim.vim

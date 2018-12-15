@@ -6,6 +6,7 @@ endif
 
 set ignorecase smartcase
 set incsearch
+set nohlsearch
 set number
 set wildmenu
 set showmatch
