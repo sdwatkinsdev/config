@@ -1,0 +1,1 @@
+- Move autohotkey script from OG inspiron into here 
