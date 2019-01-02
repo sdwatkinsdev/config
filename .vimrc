@@ -86,6 +86,18 @@ nnoremap <leader>/ ^i# <ESC>b
 " Regenerate tags for Ruby projects (works in real Vim but not IdeaVim)
 nnoremap <leader>gt :!ripper-tags -R --exclude=vendor<CR>
 
+" Automatically save the current session whenever vim is closed
+autocmd VimLeave * mksession! ~/.vim/shutdown_session.vim
+
+" <F7> restores that 'shutdown session'
+noremap <F7> :source ~/.vim/shutdown_session.vim<CR>
+
+" manually save a session with <F5>
+noremap <F5> :mksession! ~/.vim/manual_session.vim<cr>
+
+" recall the manually saved session with <F6>
+noremap <F6> :source ~/.vim/manual_session.vim<cr>
+
 " color stuff that needs to go elsewhere
 highlight Error ctermbg=124
 highlight ErrorMsg ctermbg=124
@@ -101,7 +113,7 @@ hi DiffText ctermbg=22 ctermfg=15
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
 Plug 'w0rp/ale'
 Plug 'tpope/vim-surround'
 " I liked gitgutter, but it clashes with ALE, which I like slightly more
