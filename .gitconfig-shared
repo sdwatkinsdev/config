@@ -41,6 +41,9 @@
     # this one is changed files for a single commit
     chc = "!f() { git diff-tree -r --name-status ${1-HEAD}~1 ${1-HEAD}; }; f"
 
+    # diffs the worktree against an arbitrary commit and applies those diffs in the index (make the index look like <commit>)
+    reset-checkout = "!f() { git diff --cached ${1} | git apply -R --index; }; f"
+
     # run rubocop only against files changed in this branch (exclude deleted files)
     rubo = !"git diff-tree -r --no-commit-id --name-only --diff-filter=d master HEAD | xargs rubocop"
 
