@@ -119,5 +119,6 @@
     "extensions.ignoreRecommendations": true,
     "telemetry.enableTelemetry": false,
     "editor.acceptSuggestionOnEnter": "off",
-    "editor.detectIndentation": false
+    "editor.detectIndentation": false,
+    "terminal.integrated.rendererType": "dom"
 }

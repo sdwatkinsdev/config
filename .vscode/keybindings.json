@@ -76,15 +76,30 @@
         "key": "ctrl+]",
         "command": "workbench.action.navigateForward",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+k",
+        "command": "workbench.action.terminal.clear",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+up",
+        "command": "workbench.action.focusAboveGroup",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+down",
+        "command": "workbench.action.focusBelowGroup",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus"
     }
-    // {
-    //     "key": "ctrl+tab",
-    //     "command": "workbench.action.nextEditor",
-    //     "when": "editorTextFocus"
-    // },
-    // {
-    //     "key": "ctrl+shift+tab",
-    //     "command": "workbench.action.previousEditor",
-    //     "when": "editorTextFocus"
-    // }
 ]
