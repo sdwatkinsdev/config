@@ -1,7 +1,6 @@
 [push]
     default = current
 [alias]
-    am = commit --amend
     ap = add -p
     amend = commit --amend
     amx = commit --amend --no-edit
