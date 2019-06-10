@@ -10,7 +10,7 @@
     cfg = !vim ~/stephen_config/.gitconfig-shared
     cfge = config --global -e
     ch = checkout
-    com = commit -m
+    chm = checkout master
     dif = diff
     difc = diff --cached -w
     difw = diff -w
