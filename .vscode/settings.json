@@ -1,10 +1,11 @@
 {
     "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-    "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 5000,
     "editor.dragAndDrop": false,
     "editor.fontSize": 12,
     "editor.wordWrapColumn": 150,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 5000,
+    "FSharp.fsacRuntime": "netcore",
     "vim.easymotion": true,
     "vim.handleKeys": {
         "<C-w>": false,
@@ -120,5 +121,9 @@
     "telemetry.enableTelemetry": false,
     "editor.acceptSuggestionOnEnter": "off",
     "editor.detectIndentation": false,
-    "terminal.integrated.rendererType": "dom"
+    "terminal.integrated.rendererType": "dom",
+    "extensions.autoUpdate": false,
+    "fantomas.pageWidth": 120,
+    "fantomas.spaceBeforeColon": false,
+    "FSharp.enableTouchBar": false
 }
