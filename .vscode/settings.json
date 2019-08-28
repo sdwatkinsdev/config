@@ -125,5 +125,10 @@
     "extensions.autoUpdate": false,
     "fantomas.pageWidth": 120,
     "fantomas.spaceBeforeColon": false,
-    "FSharp.enableTouchBar": false
+    "FSharp.enableTouchBar": false,
+    "debug.console.wordWrap": false,
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.tree.indent": 24,
+    "workbench.editor.showIcons": false,
+    "fantomas.reorderOpenDeclaration": true
 }
