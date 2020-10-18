@@ -11,6 +11,7 @@
     cfge = config --global -e
     ch = checkout
     chm = checkout master
+    chp = checkout -p
     dif = diff
     difc = diff --cached -w
     difw = diff -w
