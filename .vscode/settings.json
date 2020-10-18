@@ -62,7 +62,7 @@
         //     "after": ["`", "[", "v", "`", "]"]
         // }
     ],
-    "vim.substituteGlobalFlag": true,
+    "vim.gdefault": true,
     "vim.textwidth": 120,
     "vim.timeout": 2000,
     "vim.useSystemClipboard": true,
@@ -130,5 +130,32 @@
     "workbench.tree.renderIndentGuides": "always",
     "workbench.tree.indent": 24,
     "workbench.editor.showIcons": false,
-    "fantomas.reorderOpenDeclaration": true
+    "fantomas.reorderOpenDeclaration": true,
+    "editor.cursorSurroundingLines": 8,
+    "workbench.editor.splitSizing": "split",
+    "[css]": {
+        "editor.tabSize": 2
+    },
+    "[js]": {
+        "editor.tabSize": 2
+    },
+    "[svelte]": {
+        "editor.tabSize": 2
+    },
+    "[typescript]": {
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+    "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+    "editor.tabSize": 2,
+    "javascript.format.semicolons": "remove",
+    "typescript.format.semicolons": "remove",
+    "javascript.preferences.quoteStyle": "single",
+    "typescript.preferences.quoteStyle": "single",
+    "prettier.singleQuote": true,
+    "prettier.arrowParens": "avoid",
+    "prettier.printWidth": 150,
+    "prettier.semi": false,
+    "editor.codeLens": false
 }

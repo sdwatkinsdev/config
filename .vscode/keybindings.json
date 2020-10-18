@@ -133,7 +133,7 @@
         "when": "terminalFocus"
     },
     {
-        "key": "ctrl+d",
+        "key": "alt+d",
         "command": "workbench.action.terminal.split",
         "when": "terminalFocus"
     },
@@ -141,5 +141,9 @@
         "key": "ctrl+w",
         "command": "workbench.action.terminal.kill",
         "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+k =",
+        "command": "workbench.action.toggleMaximizedPanel"
     }
 ]
